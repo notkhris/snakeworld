@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./vue.js"></script>
+    <script src="./main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div id="app">
+        <nav id="mainNav">
+
+            <span class="icon-bg"><img @click="subNavIsShow=!subNavIsShow" width="50px" class="pointer" src="./clear image/menu.png" alt=""></span>
+            
+            <img @click="currentContent = 0" id="home-img" class="pointer" src="./clear image/home-19.png" alt="">
+            <span @click="currentContent=4" class="pointer btn"> ABOUT</span>
+        </nav>
+
+        <nav id="subNav" :class="subNavIsShow ? 'isOpen' : 'isClose'">
+            <ul >
+                <li @click="currentContent=1" class="btn pointer" ><img src="./clear image/ikon1-18.png" alt="" class="icon">Skin</li>
+                <li @click="currentContent=2" class="btn pointer"><img src="./clear image/ikon2-18.png" alt="" class="icon">Typography</li>
+                <li @click="currentContent=3" class="btn pointer"><img src="./clear image/ikon3-18.png" alt="" class="icon">Poster</li>
+            </ul>
+        </nav>
+
+        <div v-show="currentContent == 0" class="content verticle" id="cntSkin" :class="{fade:isOpen}">
+            
+            <!-- <img src="./image/smoke.jpg" alt="" id="smoke"> -->
+            <div class="placeholder"></div>
+            
+            <!-- <img class="snake-img-deco" :src="`./clear image/ssmoke.png`" alt="" srcset=""> -->
+            <img class="snake-img-deco" :src="`./clear image/smoke2.gif`" alt="" srcset="">
+            
+            <img class="snake-img" :src="`./clear image/snakeimg${snakeImg}.png`" alt="" srcset="">
+            <ul class="sname-change-btn">
+                <li @click="snakeImg = 1" class="snake-btn pointer"></li>
+                <li @click="snakeImg = 2" class="snake-btn pointer"></li>
+                <li @click="snakeImg = 3" class="snake-btn pointer"></li>
+            </ul>
+        </div>
+
+        <div v-show="currentContent == 1" id="desc-skin" class="content" id="cntType" :class="{fade:isOpen}">
+            
+            
+        </div>
+
+        <div v-show="currentContent == 2" id="desc-type" class="content" id="cntType" :class="{fade:isOpen}">
+            <div id="colorList">
+                <ul id="colorListA">
+                    <li>#BFB0FF</li>
+                    <li>#5D0CEA</li>
+                    <li>#3D109D</li>
+                    <li>#231F20</li>
+                </ul>
+                <!-- <ul>
+                    <li>#231F20</li>
+                </ul> -->
+            </div>
+            
+        </div>
+
+        <div v-show="currentContent == 3" id="desc-poster" class="content" id="cntPoster" :class="{fade:isOpen}">
+            <img src="./clear image/smock.jpg" alt="">
+        </div>
+
+        <div v-show="currentContent == 4" class="content verticle" id="cntPoster" :class="{fade:isOpen}">
+            <div class="placeholder"></div>
+            <div>
+                <img @click="currentContent = 'step1'"  class="pointer" src="./image/step 1.png" alt="" srcset="">
+            <img @click="currentContent = 'step2'"  class="pointer" src="./image/step2.png" alt="" srcset="">
+            <img @click="currentContent = 'step3'"  class="pointer" src="./image/step 3.png" alt="" srcset="">
+            </div>
+            <h1>PROCESS</h1>
+            
+        </div>
+
+        <div class="content verticle about-page" id="content-inspiration" v-show="currentContent == 'step1'">
+            <div class="placeholder"></div>
+            <p>The inspiration behind the snake world project includes a variety of experience that occurs in my lives. I came up with the first idea a couple of months ago at my birthday party. I remember my parents said something about my zodiac sign “Snake” which got a year older age. The year of the snake is considered as zodiacal since people’s personality or traits are influenced by the animal sign based on the time of birth. For the second idea, the Gucci fashion brand came to my eyesight occasionally due to its popularity. There is a snake design in one of their products which inspires me to do this project even more. As for the font design, the blackletter typeface gives me a new approach to the design from their unique strokes and style. Therefore, I decided to use parallel pens to design the typeface for a distinctive look where not all strokes are curly and distorted.</p>
+            <h1>INSPIRATION</h1>
+        </div>
+
+        <div class="content verticle about-page" id="content-goal" v-show="currentContent == 'step2'">
+            <div class="placeholder"></div>
+            <p>The main goal of using snakes in the design is to convey a message of risk from their traits. Some people believe snakes indicate a strong force in nature and the capability to become immortal, but they can also be risky and evil from their desires and venom. Based on this, I use society as a representative to reveal the idea. The consumption of alcohol and cigarettes would be a great thing to discuss from society. The health problem behind this is also significant to the topic. According to the national institutes of health, there are about 95,0005 people die from both the use of alcohol and tobacco annually; the effects include cancer and heart disease. As a result, alcohol, and cigarettes are used as the main element to illustrate the purpose of risk.
+            </p>
+            <h1>GOAL</h1>
+        </div>
+
+        <div class="content verticle about-page" id="content-research" v-show="currentContent == 'step3'">
+            <div class="placeholder"></div>
+            <p>The snake investigation process was divided into four parts: body structure, head, size, and scale. In their bodies, they have about 200 to 400 vertebrae with many attached ribs, this contributes to their flexibility which is why they can always move curly. Next, their heads are mostly triangular-shaped head that consists of venom. The size is also varied among species which is approximately 3.3 ft in length. For the scales, snakes have different patterns that contain an outer surface and an inner surface similar to fish scales. </p>
+            <h1>RESEARCH</h1>
+        </div>
+    </div>
+</body>
+</html>
