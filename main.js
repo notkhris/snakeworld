@@ -15,6 +15,7 @@ window.onload=()=>{
                     this.subNavIsShow = false
                 })
             })
+            document.querySelector('#app').getElementsByClassName.display = 'block'
         }
     })
 }

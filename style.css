@@ -7,6 +7,7 @@ html {
   min-width: 900px;
 }
 #app {
+  display: none;
   padding: 0;
   margin: 0;
   min-width: 1440px;
