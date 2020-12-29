@@ -10,7 +10,7 @@ html {
   display: none;
   padding: 0;
   margin: 0;
-  min-width: 1440px;
+  min-width: 900px;
   position: relative;
 }
 .icon-bg {
@@ -27,15 +27,18 @@ html {
   display: flex;
   justify-content: space-between;
   position: fixed;
+  align-items: center;
   width: 100%;
   min-width: 900px;
   top: 10px;
   padding: 10px;
   z-index: 99;
 }
+#menu-btn {
+  width: 50px;
+}
 #home-img {
-  justify-self: center;
-  width: 500px;
+  max-width: 500px;
 }
 #smoke {
   position: absolute;
@@ -104,6 +107,7 @@ html {
 .content {
   position: absolute;
   width: 100%;
+  background-color: #fff;
   height: 100vh;
   left: 0;
   top: 0;
@@ -131,20 +135,20 @@ html {
   transform: translateX(-300px);
 }
 #content-inspiration {
-  background-image: url("./image/inspiration.png");
+  background-image: url("image/inspiration.png");
 }
 #content-inspiration p {
   width: 26vw;
 }
 #content-goal {
-  background-image: url("./image/goal_1.png");
+  background-image: url("image/goal_1.png");
   background-size: contain;
 }
 #content-goal p {
   width: 26vw;
 }
 #content-research {
-  background-image: url("./image/research.png");
+  background-image: url("image/research.png");
 }
 #content-research p {
   width: 26vw;
@@ -179,7 +183,7 @@ html {
   position: relative;
   z-index: 11;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 @keyframes opacityAni {
   0% {
@@ -209,10 +213,10 @@ html {
   transform: scale(1.5);
 }
 #desc-skin {
-  background-image: url("./clear image/skin123-14.png");
+  background-image: url("clear image/skin123-14.png");
 }
 #desc-type {
-  background-image: url("./clear image/font12-15.png");
+  background-image: url("clear image/font12-15.png");
   background-size: 90vw;
   background-position: 5vw 10vh ;
 }
