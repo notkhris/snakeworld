@@ -6,10 +6,15 @@ window.onload=()=>{
         data(){
             return{
 
-            
+                snakeImgs: [
+                    'https://i.loli.net/2020/12/31/cqDxzoTMuwkKJ7s.png',
+                    'https://i.loli.net/2020/12/31/tTHb9XhPDfugJqL.png',
+                    'https://i.loli.net/2020/12/31/Bs6gy9XJmKaR4vA.png'
+                
+                ],
             subNavIsShow:false,
             currentContent:0,
-            snakeImg:1,
+            snakeImg:0,
             isOpen:false
             }
         },

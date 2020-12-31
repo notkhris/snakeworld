@@ -38,11 +38,11 @@
             <!-- <img class="snake-img-deco" :src="`./clear image/ssmoke.png`" alt="" srcset=""> -->
             <img class="snake-img-deco" src="https://i.loli.net/2020/12/31/l2QFJqLo9Zv4Uux.gif" alt="" srcset="">
             
-            <img class="snake-img" :src="`./clear image/snakeimg${snakeImg}.png`" alt="" srcset="">
+            <img class="snake-img" :src="snakeImgs[snakeImg]" alt="" srcset="">
             <ul class="sname-change-btn">
+                <li @click="snakeImg = 0" class="snake-btn pointer"></li>
                 <li @click="snakeImg = 1" class="snake-btn pointer"></li>
                 <li @click="snakeImg = 2" class="snake-btn pointer"></li>
-                <li @click="snakeImg = 3" class="snake-btn pointer"></li>
             </ul>
         </div>
 
